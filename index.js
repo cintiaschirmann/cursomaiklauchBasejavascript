@@ -1,21 +1,28 @@
 // criar um programa que calcula media
 // das notas ente os alunos e envia
-// mensagemd e calculo de media
+// mensagem e calculo de media
 
-const aluno01 = 'Mayk'
-const notaAluno01 = 9.0
+const aluno01 = {
+  nome: "Mayk",
+  nota: 9.8
+}
 
-const aluno02 = 'Diego'
-const notaAluno02 = 10
+const aluno02 = {
+  nome: "Diego",
+  nota: 10
+}
 
-const aluno03 = 'Fulano'
-const notaAluno03 = 2
+const aluno03 = {
+  nome: "Fulano",
+  nota: 2
+}
+
 
 
 const media = (notaAluno01 + notaAluno02 + notaAluno03) / 3
 
 // se a media for maior que 5 parabenizar a turma
-if (true) {
+if (media > 5) {
  console.log(`a nota foi de ${media}. Parabens`)
 
 
@@ -25,4 +32,18 @@ console.log('a media é menor que 5')
 
 }
 
-console.log(media < 5)
+console.log(media < 5
+  )
+
+
+  const idade = 18
+
+  //verificar se a idade é igual ou maior de 18 anos
+  //se sim, deioxar entrar, se nao, bloquear entrada
+  // se a pessoa tiver 17 anos 
+  //avisar pra voltar quando fizer 18 anos
+  if (!(idade>=18) || idade === 17) {
+    console.log ('bloquear entrada')
+  } else {
+    console.log ('deixar entrar')
+  }
