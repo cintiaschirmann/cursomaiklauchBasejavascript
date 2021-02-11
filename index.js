@@ -18,8 +18,10 @@ const alunos = [
   }
 ]
 
+const nomesDeAlunos = ["Mayk", "Diego", "Fulano"]
 
-const media = ( aluno01.nota + aluno02.nota + aluno03.nota) / 3
+
+const media = ( alunos[0].nota + alunos[1].nota + alunos[2].nota) / 3
 
 // se a media for maior que 5 parabenizar a turma
 if (media > 5) {
