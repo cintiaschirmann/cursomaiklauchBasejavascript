@@ -1,8 +1,3 @@
-// criar um programa que calcula media
-// das notas ente os alunos e envia
-// mensagem e calculo de media
-
-
 const alunosDaTurmaA = [
   {
     nome: "Mayk",
@@ -15,7 +10,11 @@ const alunosDaTurmaA = [
   {
     nome: "Fulano",
     nota: 2
-  }
+  },
+  {
+    nome:'Mais um aluno',
+    nota: 10,
+  },
 ]
 
 const alunosDaTurmaB = [
@@ -46,18 +45,17 @@ function calculaMedia(alunos) {
   }
 
   const media = soma / alunos.lenght
-  console.log(media)
+  return media
 
 }
 
 const media1 = calculaMedia (alunosDaTurmaA)
-//const media2 = calculaMedia (alunosDaTurmaB)
+const media2 = calculaMedia (alunosDaTurmaB)
 
 
 
 
 function enviaMensagem(media, turma) {
-  // se a media for maior que 5 parabenizar a turma
 if (media > 5) {
   console.log(`a media da turma ${turma} foi de ${media}. Parabens`)
  }  else {
@@ -71,8 +69,31 @@ if (media > 5) {
  
 }
 
-//PARAMETROS DA FUNÇÃO
 enviaMensagem(media1, 'turmaA')
 enviaMensagem(media2, 'turmaB')
 
+
+function marcarComoReprovado(aluno){
+  aluno.reprovado = false;
+  if (aluno.nota < 5) {
+    aluno.reprovado = true;
+  }
+
+}
+
+function enviaMensagemReprovado (aluno) {
+  if(aluno.reprovado) {
+    console.log(`o aluno ${aluno.nome} esta reprovado!`)
+  }
+}
+
+function alunoReprovado (alunos) {
+  for (let aluno of alunos) {
+    marcarComoReprovado(aluno);
+    enviaMensagemReprovado(aluno); 
+  }
+}
+
+alunoReprovado(alunosDaTurmaA)
+alunoReprovado(alunosDaTurmaB)
 
